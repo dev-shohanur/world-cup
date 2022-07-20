@@ -49,6 +49,8 @@ main {
     font-weight: normal;
 }
 
+
+
 .hero-button {
     margin: 30px 0;
 }
@@ -61,6 +63,36 @@ main {
     padding: 10px 20px;
     border-radius: 5px;
 }
+
+.hero-button a:hover {
+    background-color: white;
+    border: 2px solid #DD0000;
+    color: #DD0000;
+    font-weight: bold;
+}
+
+.hero-button a i {
+    animation: slid 1s ease-in-out forwards infinite alternate 1s;
+}
+
+/* Button Animation  */
+@keyframes slid {
+    0% {
+        padding-left: 10px;
+    }
+
+    50% {
+        padding-left: 15px;
+    }
+
+    100% {
+        padding-left: 20px;
+    }
+}
+
+/* .hero-button:hover i {
+    animation: none;
+} */
 
 .hero-banner-img img {
     width: 100%;
@@ -169,18 +201,22 @@ main {
     text-align: center;
     padding: 20px;
 }
+
 .team-flag {
     display: grid;
     grid-template-columns: 1fr 0.75fr 1fr;
     align-items: center;
 }
+
 .team-flag span img {
     width: 100%;
 }
+
 .match-ditels h3 {
     font-weight: 800;
     font-size: 1.2em;
 }
+
 .match-ditels p {
     color: #4D4D4D;
     margin: -10px 0;
@@ -245,7 +281,7 @@ ul.footer-menu li {
 
 
     .hero-text-box h1 {
-        font-size: 36px;
+        font-size: 30px;
     }
 
     .hero-text-box p {
@@ -256,7 +292,8 @@ ul.footer-menu li {
     }
 
     .hero-banner-img img {
-        margin-bottom: -291px;
+        /* margin-bottom: 101px;
+        padding-bottom: 100px; */
     }
 
     .Blogs-and-PageLink {
@@ -283,10 +320,75 @@ ul.footer-menu li {
         gap: 20px;
     }
 
-    .teblet-view-btn{
+    .teblet-view-btn {
         display: block;
     }
 }
+
+
+
+
+
+
+
+@media screen and (min-width:577px) and (max-width:767px) {
+    .hero-section {
+        padding: 0 20px;
+    }
+
+    .hero-text-box h1 {
+        font-size: 26px;
+    }
+
+    .hero-text-box p {
+        height: 40px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 14px;
+    }
+
+    .hero-button a {
+        font-size: 18px;
+    }
+
+    .hero-banner-img img {
+        /* margin-bottom: 101px;
+        padding-bottom: 100px; */
+    }
+
+    .Blogs-and-PageLink {
+        grid-template-columns: none;
+    }
+
+    .page-links {
+        height: 120px;
+        margin-top: -60px;
+        background-color: white;
+    }
+
+    .page-links .links {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 20px;
+    }
+
+    .page-links .links .link {
+        border: 1px solid gainsboro;
+    }
+
+    .page-links .links .link a {
+        font-size: 16px;
+    }
+
+    .content-boxs {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .teblet-view-btn {
+        display: block;
+    }
+}
+
 
 /* 
 \\\\\\\\\\\\\\\\\\\     Mobile Responsive Styles     ///////////////////
@@ -295,6 +397,10 @@ ul.footer-menu li {
 @media screen and (max-width:576px) {
 
     /* hero section  */
+    .hero-section {
+        padding: 33px 60px 0 60px;
+    }
+
     .contianer {
         grid-template-columns: none;
         text-align: center;
@@ -304,11 +410,21 @@ ul.footer-menu li {
         font-size: 36px;
     }
 
+    .hero-text-box p {
+        height: 40px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 14px;
+    }
+
     .Blogs-and-PageLink {
         grid-template-columns: none;
         row-gap: 30px;
     }
 
+    .page-links {
+        background-color: white;
+    }
 
     .page-links .links .link {
         border: 1px solid gainsboro;
